@@ -1,0 +1,107 @@
+/* Background styling */
+body, html {
+      
+
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: url('/gg/Image/nezuko-glowing-eyes-demon-slayer-gif-desktop-wallpaper-cover.gif');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(100%);
+    background-color:skyblue
+}
+
+/* Header and Footer styling */
+.header, .footer {
+    color: black;
+    text-align: center;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #f44336;
+    border-radius: 4px;
+}
+
+.nav-link.login {
+    margin-left: auto;
+    background-color: #f44336;
+    border-radius: 4px;
+}
+
+.nav-link.login:hover {
+    background-color: #d32f2f;
+}
+
+/* Social media styling */
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+    font-family: Arial, sans-serif;
+}
+
+.social-media img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Heading styling */
+h2 {
+    color: violet;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
+}
+
+/* Footer styling */
+.footer {
+    color: black;
+    text-align: center;
+   
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        padding: 10px;
+        font-size: 16px;
+    }
+}

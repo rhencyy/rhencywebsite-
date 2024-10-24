@@ -1,0 +1,170 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/gg/Image/download.gif');
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: skyblue; 
+    line-height: 1.6;
+
+    /* Add a semi-transparent overlay for better text readability */
+    
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust this for the best contrast */
+    z-index: -1; /* Ensure the overlay stays behind the content */
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Adjust for smaller screens */
+    }
+}
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: #f44336;
+}
+
+/* Profile Section */
+.profile {
+    margin-top: 80px; /* To prevent content from being hidden behind the fixed navbar */
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    transition: transform 0.5s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+}
+
+.profile h1,
+.profile h3 {
+    color: white;
+    margin-top: 10px;
+}
+
+.profile p {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #f0f0f0;
+}
+
+/* Favorites Section */
+.favorites {
+    padding: 20px;
+}
+
+.favorites table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.favorites th {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.favorites td {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.favorites ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.favorites li {
+    margin-bottom: 5px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .favorites table,
+    .favorites th,
+    .favorites td {
+        display: block;
+        width: 100%;
+    }
+
+    .favorites tr {
+        margin-bottom: 20px;
+    }
+}
